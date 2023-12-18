@@ -1,0 +1,33 @@
+.display-container {
+  width: 100%;
+  border: 3px solid purple;
+  display: flex;
+  flex: 2 1 0;
+  flex-direction: column;
+}
+
+.education-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.education-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wraper {
+  display: flex;
+}
+
+.wraper > * {
+  flex: 1;
+}
+
+.date-container {
+  display: flex;
+  gap: 5px;
+}
