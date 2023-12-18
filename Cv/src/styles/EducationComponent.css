@@ -1,4 +1,4 @@
-.personal-input-container {
+.experience-component-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,20 +17,26 @@
   gap: 10px;
 }
 
-#personalDelete {
+.education-component-header {
+  display: flex;
+  justify-contact: center;
+  align-items: center;
+  gap: 10px;
+  font-size: calc(0.7rem + 1vw);
+}
+
+#saveBtn {
   width: 40%;
-  color: red;
+  color: #fff;
   margin-top: 0.5rem;
   padding: 7px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  background-color: #187ff5;
   font-weight: 700;
 }
-#personalDelete:hover {
-  filter: brightness(70%);
-}
 
-.personal-info-header {
-  font-size: calc(0.7rem + 1vw);
+#saveBtn:hover {
+  filter: brightness(70%);
 }

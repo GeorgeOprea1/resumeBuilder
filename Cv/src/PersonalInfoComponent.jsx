@@ -5,7 +5,7 @@ const PersonalInfoComponent = (props) => {
     <div className="input-container">
       <h2 className="personal-info-header">Personal Details</h2>
       <div className="personal-input-container">
-        <label htmlFor="fullName">Full Name:</label>
+        <label htmlFor="fullName">Full Name</label>
         <input
           type="text"
           id="fullName"
@@ -14,20 +14,18 @@ const PersonalInfoComponent = (props) => {
           onChange={props.nameChange}
         />
       </div>
-      <div>
-        <div className="personal-input-container">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Email"
-            value={props.email}
-            onChange={props.emailChange}
-          />
-        </div>
+      <div className="personal-input-container">
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          value={props.email}
+          onChange={props.emailChange}
+        />
       </div>
       <div className="personal-input-container">
-        <label htmlFor="phoneNumber">Phone Number:</label>
+        <label htmlFor="phoneNumber">Phone Number</label>
         <input
           type="tel"
           id="phoneNumber"
@@ -37,7 +35,7 @@ const PersonalInfoComponent = (props) => {
         />
       </div>
       <div className="personal-input-container">
-        <label htmlFor="address">Address:</label>
+        <label htmlFor="address">Address</label>
         <input
           type="text"
           id="address"

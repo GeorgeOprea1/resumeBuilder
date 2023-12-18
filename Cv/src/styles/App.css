@@ -1,16 +1,30 @@
 .app-container {
   width: 90%;
   display: flex;
-  height: 90vh;
-  gap:1rem
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .inputs-container {
+  width: 25%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-cotent: center;
   align-items: center;
+  overflow-y: scroll;
 }
 
-input
+.display-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
