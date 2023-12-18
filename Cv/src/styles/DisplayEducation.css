@@ -1,6 +1,5 @@
 .display-container {
   width: 100%;
-  border: 3px solid purple;
   display: flex;
   flex: 2 1 0;
   flex-direction: column;
@@ -17,6 +16,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(14, 55, 78, 0.07);
+  border-radius: 1rem;
+  padding: 5px 0 5px 0;
 }
 
 .wraper {
