@@ -1,4 +1,5 @@
 import "./styles/DisplayEducation.css";
+import { MdDeleteForever } from "react-icons/md";
 
 const DisplayEducation = ({ data, onDelete }) => {
   const handleDelete = (index) => {
@@ -23,10 +24,13 @@ const DisplayEducation = ({ data, onDelete }) => {
                 <strong>{item.school}</strong>
               </p>
               <p>{item.degree}</p>
-            </div>
+            </div>{" "}
           </div>
-          <button onClick={() => handleDelete(index)}>Delete</button>
-          <hr />
+          <div className="btn-container">
+            <button id="DeleteEdBtn" onClick={() => handleDelete(index)}>
+              <MdDeleteForever />
+            </button>
+          </div>
         </div>
       ))}
     </div>

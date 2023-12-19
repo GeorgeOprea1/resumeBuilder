@@ -1,4 +1,5 @@
 import "./styles/DisplayExperience.css";
+import { MdDeleteForever } from "react-icons/md";
 
 const DisplayExperience = ({ data, onDelete }) => {
   const handleDelete = (index) => {
@@ -20,15 +21,19 @@ const DisplayExperience = ({ data, onDelete }) => {
             </div>
             <div className="company-description-container">
               <div className="company-container">
-                <p> {item.company}</p>
+                <p>
+                  <strong>{item.company}</strong>{" "}
+                </p>
                 <p> {item.position}</p>
               </div>
               <p>{item.description}</p>
             </div>
           </div>
-
-          <button onClick={() => handleDelete(index)}>Delete</button>
-          <hr />
+          <div className="btn-container">
+            <button id="DeleteExBtn" onClick={() => handleDelete(index)}>
+              <MdDeleteForever />
+            </button>
+          </div>
         </div>
       ))}
     </div>
