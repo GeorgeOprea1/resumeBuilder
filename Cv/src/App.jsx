@@ -60,6 +60,14 @@ const App = () => {
     setExperienceData(updatedExperienceData);
   };
 
+  function deleteAll() {
+    personalInfoDeleteBtn();
+    handleExperienceDelete();
+    handleEducationDelete();
+    setEducationData([]);
+    setExperienceData([]);
+  }
+
   return (
     <div className="app-container">
       <Header />
@@ -76,7 +84,7 @@ const App = () => {
             address={address}
             onDelete={personalInfoDeleteBtn}
           />
-          <TemplateLoader />
+          <TemplateLoader deleteAll={deleteAll} />
           <EducationComponent onSave={handleEducationSave} />
 
           <ExperienceComponent onSave={handleExperienceSave} />
