@@ -6,6 +6,7 @@ import DisplayEducation from "./DisplayEducation";
 import DisplayExperience from "./DisplayExperience";
 import DisplayPersonalInfo from "./DisplayPersonalInfo";
 import PersonalInfoComponent from "./PersonalInfoComponent";
+import Header from "./Header";
 
 const App = () => {
   const [fullName, setFullName] = useState("");
@@ -60,37 +61,40 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <div className="inputs-container">
-        <PersonalInfoComponent
-          nameChange={handleFullNameChange}
-          emailChange={handleEmailChange}
-          phoneChange={handlePhoneNumberChange}
-          addressChange={handleAddressChange}
-          fullName={fullName}
-          email={email}
-          phoneNumber={phoneNumber}
-          address={address}
-          onDelete={personalInfoDeleteBtn}
-        />
-        <EducationComponent onSave={handleEducationSave} />
-        <ExperienceComponent onSave={handleExperienceSave} />
-      </div>
+      <Header />
+      <div className="interface-container">
+        <div className="inputs-container">
+          <PersonalInfoComponent
+            nameChange={handleFullNameChange}
+            emailChange={handleEmailChange}
+            phoneChange={handlePhoneNumberChange}
+            addressChange={handleAddressChange}
+            fullName={fullName}
+            email={email}
+            phoneNumber={phoneNumber}
+            address={address}
+            onDelete={personalInfoDeleteBtn}
+          />
+          <EducationComponent onSave={handleEducationSave} />
+          <ExperienceComponent onSave={handleExperienceSave} />
+        </div>
 
-      <div className="display-container">
-        <DisplayPersonalInfo
-          fullName={fullName}
-          email={email}
-          phoneNumber={phoneNumber}
-          address={address}
-        />
-        <DisplayEducation
-          data={educationData}
-          onDelete={handleEducationDelete}
-        />
-        <DisplayExperience
-          data={experienceData}
-          onDelete={handleExperienceDelete}
-        />
+        <div className="display-container">
+          <DisplayPersonalInfo
+            fullName={fullName}
+            email={email}
+            phoneNumber={phoneNumber}
+            address={address}
+          />
+          <DisplayEducation
+            data={educationData}
+            onDelete={handleEducationDelete}
+          />
+          <DisplayExperience
+            data={experienceData}
+            onDelete={handleExperienceDelete}
+          />
+        </div>
       </div>
     </div>
   );
