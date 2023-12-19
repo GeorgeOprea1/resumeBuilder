@@ -7,6 +7,7 @@ import DisplayExperience from "./DisplayExperience";
 import DisplayPersonalInfo from "./DisplayPersonalInfo";
 import PersonalInfoComponent from "./PersonalInfoComponent";
 import Header from "./Header";
+import TemplateLoader from "./TemplateLoader";
 
 const App = () => {
   const [fullName, setFullName] = useState("");
@@ -75,7 +76,9 @@ const App = () => {
             address={address}
             onDelete={personalInfoDeleteBtn}
           />
+          <TemplateLoader />
           <EducationComponent onSave={handleEducationSave} />
+
           <ExperienceComponent onSave={handleExperienceSave} />
         </div>
 
