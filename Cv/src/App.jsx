@@ -1,7 +1,7 @@
 import EducationComponent from "./EducationComponent";
 import ExperienceComponent from "./ExperienceComponent";
 import "./styles/App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import DisplayEducation from "./DisplayEducation";
 import DisplayExperience from "./DisplayExperience";
 import DisplayPersonalInfo from "./DisplayPersonalInfo";
@@ -68,6 +68,14 @@ const App = () => {
     setExperienceData([]);
   }
 
+  function deleteEdSection() {
+    setEducationData([]);
+  }
+
+  function deleteExSection() {
+    setExperienceData([]);
+  }
+
   return (
     <div className="app-container">
       <Header />
@@ -85,9 +93,15 @@ const App = () => {
             onDelete={personalInfoDeleteBtn}
           />
           <TemplateLoader deleteAll={deleteAll} />
-          <EducationComponent onSave={handleEducationSave} />
+          <EducationComponent
+            onSave={handleEducationSave}
+            deleteEducation={deleteEdSection}
+          />
 
-          <ExperienceComponent onSave={handleExperienceSave} />
+          <ExperienceComponent
+            onSave={handleExperienceSave}
+            deleteExperience={deleteExSection}
+          />
         </div>
 
         <div className="display-container">

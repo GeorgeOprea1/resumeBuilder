@@ -26,11 +26,6 @@ const DisplayEducation = ({ data, onDelete }) => {
               <p>{item.degree}</p>
             </div>{" "}
           </div>
-          <div className="btn-container">
-            <button id="DeleteEdBtn" onClick={() => handleDelete(index)}>
-              <MdDeleteForever />
-            </button>
-          </div>
         </div>
       ))}
     </div>

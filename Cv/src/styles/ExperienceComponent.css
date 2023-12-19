@@ -60,3 +60,27 @@
 #SaveBtn:hover {
   filter: brightness(70%);
 }
+
+#DeleteBtn:active {
+  filter: brightness(90%);
+}
+
+#DeleteBtn {
+  width: 40%;
+  color: red;
+  margin-top: 0.5rem;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#DeleteBtn:hover {
+  filter: brightness(70%);
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}

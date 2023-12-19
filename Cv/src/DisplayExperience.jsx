@@ -29,11 +29,6 @@ const DisplayExperience = ({ data, onDelete }) => {
               <p>{item.description}</p>
             </div>
           </div>
-          <div className="btn-container">
-            <button id="DeleteExBtn" onClick={() => handleDelete(index)}>
-              <MdDeleteForever />
-            </button>
-          </div>
         </div>
       ))}
     </div>

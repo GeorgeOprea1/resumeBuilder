@@ -4,7 +4,7 @@ import { FaSuitcase } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaChevronUp } from "react-icons/fa";
 
-const ExperienceComponent = ({ onSave }) => {
+const ExperienceComponent = ({ onSave, deleteExperience }) => {
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
   const [startExDate, setStartExDate] = useState("");
@@ -114,9 +114,14 @@ const ExperienceComponent = ({ onSave }) => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
-          <button id="SaveBtn" onClick={handleSave}>
-            Save
-          </button>
+          <div className="btn-container">
+            <button id="SaveBtn" onClick={handleSave}>
+              Save
+            </button>
+            <button id="DeleteBtn" onClick={deleteExperience}>
+              Delete
+            </button>
+          </div>
         </>
       ) : (
         ""

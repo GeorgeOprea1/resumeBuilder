@@ -1,7 +1,6 @@
 .education-container {
   display: flex;
   width: 100%;
-
   flex-direction: column;
 }
 
@@ -34,21 +33,7 @@
 }
 .date-location-container > * {
   flex: 1;
-}
-
-#DeleteEdBtn {
-  width: 30px;
-  height: 30px;
-  border-radius: 1rem;
-  background-color: red;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#DeleteEdBtn:hover {
-  filter: brightness(70%);
+  padding-left: 1rem;
 }
 
 .date-container {
@@ -63,4 +48,5 @@
 
 .school-container > * {
   flex: 1;
+  padding-left: 1rem;
 }

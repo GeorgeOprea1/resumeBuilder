@@ -34,17 +34,10 @@
   gap: 5px;
 }
 
-#DeleteExBtn {
-  width: 30px;
-  height: 30px;
-  border-radius: 1rem;
-  background-color: red;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
+.company-description-container > * {
+  padding-left: 1rem;
 }
 
-#DeleteExBtn:hover {
-  filter: brightness(70%);
+.date-location-container > * {
+  padding-left: 1rem;
 }

@@ -4,7 +4,7 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaChevronUp } from "react-icons/fa";
 
-const EducationComponent = ({ onSave }) => {
+const EducationComponent = ({ onSave, deleteEducation }) => {
   const [school, setSchool] = useState("");
   const [degree, setDegree] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -94,9 +94,14 @@ const EducationComponent = ({ onSave }) => {
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
-          <button id="saveBtn" onClick={handleSave}>
-            Save
-          </button>
+          <div className="btn-container">
+            <button id="saveBtn" onClick={handleSave}>
+              Save
+            </button>
+            <button id="deleteBtn" onClick={deleteEducation}>
+              Delete
+            </button>
+          </div>
         </>
       ) : (
         ""
