@@ -8,6 +8,8 @@ import DisplayPersonalInfo from "./DisplayPersonalInfo";
 import PersonalInfoComponent from "./PersonalInfoComponent";
 import Header from "./Header";
 import TemplateLoader from "./TemplateLoader";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const App = () => {
   const [fullName, setFullName] = useState("");
@@ -76,6 +78,23 @@ const App = () => {
     setExperienceData([]);
   }
 
+  const handleDownloadPDF = () => {
+    const sectionToCapture = document.getElementById("downloadSection");
+
+    html2canvas(sectionToCapture).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+
+      const pdf = new jsPDF({
+        unit: "px",
+        format: [canvas.width, canvas.height],
+      });
+
+      pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+
+      pdf.save("section.pdf");
+    });
+  };
+
   return (
     <div className="app-container">
       <Header />
@@ -92,7 +111,10 @@ const App = () => {
             address={address}
             onDelete={personalInfoDeleteBtn}
           />
-          <TemplateLoader deleteAll={deleteAll} />
+          <TemplateLoader
+            deleteAll={deleteAll}
+            onDownload={handleDownloadPDF}
+          />
           <EducationComponent
             onSave={handleEducationSave}
             deleteEducation={deleteEdSection}
@@ -104,7 +126,7 @@ const App = () => {
           />
         </div>
 
-        <div className="display-container">
+        <div className="display-container" id="downloadSection">
           <DisplayPersonalInfo
             fullName={fullName}
             email={email}
