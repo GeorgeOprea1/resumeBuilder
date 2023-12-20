@@ -10,6 +10,7 @@ import Header from "./Header";
 import TemplateLoader from "./TemplateLoader";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import Footer from "./Footer";
 
 const App = () => {
   const [fullName, setFullName] = useState("");
@@ -143,6 +144,7 @@ const App = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
