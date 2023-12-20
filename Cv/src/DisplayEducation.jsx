@@ -1,11 +1,6 @@
 import "./styles/DisplayEducation.css";
-import { MdDeleteForever } from "react-icons/md";
 
-const DisplayEducation = ({ data, onDelete }) => {
-  const handleDelete = (index) => {
-    onDelete(index);
-  };
-
+const DisplayEducation = ({ data }) => {
   return (
     <div className="display-container">
       <h2 className="education-header">Education</h2>

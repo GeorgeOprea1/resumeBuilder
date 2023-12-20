@@ -3,7 +3,7 @@ import "./styles/Footer.css";
 
 const Footer = () => {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <p>Copyright George Oprea © 2023</p>
       <a href="https://github.com/GeorgeOprea1/cvBuilder" target="_blank">
         <FaGithub id="icon" />
