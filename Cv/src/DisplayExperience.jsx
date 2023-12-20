@@ -26,7 +26,7 @@ const DisplayExperience = ({ data, onDelete }) => {
                 </p>
                 <p> {item.position}</p>
               </div>
-              <p>{item.description}</p>
+              <p className="description">{item.description}</p>
             </div>
           </div>
         </div>

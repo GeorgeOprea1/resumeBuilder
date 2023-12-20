@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
   color: #fff;
   flex: 2 1 0;
 }
@@ -34,7 +34,6 @@
 .icon {
   width: 25px;
   height: 25px;
-  color: #fff;
 }
 
 .contact-container {
@@ -42,4 +41,37 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .resume-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    color: #fff;
+    font-size: 0.7rem;
+  }
+
+  .contact-container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+  }
+
+  .personal-info-container {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
 }

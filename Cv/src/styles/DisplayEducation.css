@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  font-size: calc(0.2rem + 1vw);
 }
 
 .education-header {
@@ -17,6 +18,10 @@
 .wraper {
   display: flex;
   width: 100%;
+}
+
+.wraper > * {
+  word-wrap: break-word;
 }
 
 .btn-container {
